@@ -149,9 +149,9 @@ LEADS = [
          chip="OFFICIALS' COUNT"),
     dict(num=2, kicker="GOPALPUR, INDIA \u2014 CYCLONE AKVAN",
          head="Akvan comes ashore in eastern India",
-         deck=("Landfall 07:30 IST; 300,000+ moved to shelters as winds gust "
+         deck=("Landfall 07:30\u201308:30 IST; 300,000+ moved to shelters as winds gust "
                "to 90 km/h. (IMD)"),
-         chip="LANDFALL 07:30 IST"),
+         chip="LANDFALL 07:30\u201308:30 IST"),
     dict(num=3, kicker="ASIA \u2014 AI SELL-OFF",
          head="AI fears sink Asia's stock markets",
          deck=("Taiwan leads the rout as AI valuations slide; SoftBank closes "
@@ -177,7 +177,7 @@ CARDS = [
          deck="A 0\u20130 draw with Malaysia tops Group E and seals qualification. (IANS)"),
     dict(num=9, kicker="BUENOS AIRES \u2014 TESLA", bg=GREEN, art="car",
          head="Tesla opens its first store in Argentina",
-         deck="Milei hails the Buenos Aires launch as Model 3 orders open. (Reuters)"),
+         deck="Unicenter showroom opens in Mart\u00ednez; Model 3, Model Y orders open. (Reuters)"),
     dict(num=10, kicker="ROME \u2014 GENERAL STRIKE", bg=OCHRE, art="crowd",
          head="Italy stops as CGIL calls strike",
          deck="Tens of thousands march in 100+ cities over wages. (Reuters)"),
