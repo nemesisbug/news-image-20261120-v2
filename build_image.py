@@ -130,7 +130,7 @@ DECK = ("Kyiv's bridges hit  ·  Akvan comes ashore  ·  Asia's markets plunge  
 STATS = [
     ("3", "Dnipro bridges hit in Kyiv"),
     ("300,000+", "evacuated before Akvan"),
-    ("\u22126.6%", "Taiex \u2014 worst week since 1990"),
+    ("\u22126.2%", "Taiex \u2014 worst week since 1991"),
     ("100,000", "UK\u2013EU youth visas a year"),
     ("2.2%", "Japan core inflation"),
     ("$3.79bn", "GTA VI first-day sales"),
@@ -154,8 +154,8 @@ LEADS = [
          chip="LANDFALL 07:30 IST"),
     dict(num=3, kicker="ASIA \u2014 AI SELL-OFF",
          head="AI fears sink Asia's stock markets",
-         deck=("Taiwan leads the rout as AI valuations slide; SoftBank plunges "
-               "16% in a day. (Morningstar)"),
+         deck=("Taiwan leads the rout as AI valuations slide; SoftBank closes "
+               "14.5% down. (Morningstar)"),
          chip="CLOSING PRICES"),
 ]
 
@@ -172,18 +172,18 @@ CARDS = [
     dict(num=7, kicker="TOKYO \u2014 INFLATION", bg=RED_DK, art="cpi",
          head="Japan core inflation hits 2.2%",
          deck="Highest this year keeps a BOJ rate rise on track. (Japan Times)"),
-    dict(num=8, kicker="SEOUL \u2014 RETRIAL", bg=PURPLE, art="court",
-         head="Court orders ex-PM Han retrial",
-         deck="Martial-law case sent back; one conviction overturned. (Japan Times)"),
-    dict(num=9, kicker="BRASILIA \u2014 INDIGENOUS LAND", bg=GREEN, art="forest",
-         head="Lula recognises Raoni's ancestral land",
-         deck="Lula gives Raoni's ancestral land permanent protection. (Al Jazeera)"),
+    dict(num=8, kicker="KUALA LUMPUR \u2014 FOOTBALL", bg=PURPLE, art="ball",
+         head="India U17 reach the Asian Cup",
+         deck="A 0\u20130 draw with Malaysia tops Group E and seals qualification. (IANS)"),
+    dict(num=9, kicker="BUENOS AIRES \u2014 TESLA", bg=GREEN, art="car",
+         head="Tesla opens its first store in Argentina",
+         deck="Milei hails the Buenos Aires launch as Model 3 orders open. (Reuters)"),
     dict(num=10, kicker="ROME \u2014 GENERAL STRIKE", bg=OCHRE, art="crowd",
          head="Italy stops as CGIL calls strike",
          deck="Tens of thousands march in 100+ cities over wages. (Reuters)"),
-    dict(num=11, kicker="SENEGAL \u2014 MIGRANT BOAT", bg=NAVY, art="boat",
-         head="Boat sinks off Senegal; dozens missing",
-         deck="Four bodies found; 50\u2013100 people were aboard. (BBC)"),
+    dict(num=11, kicker="PRETORIA \u2014 OBITUARY", bg=NAVY, art="globe",
+         head="S. Africa mourns its first woman deputy president",
+         deck="Mlambo-Ngcuka, ex-UN Women chief, dies at 71. (Mail & Guardian)"),
     dict(num=12, kicker="PARIS \u2014 YOUTH STRIKE", bg=MAROON, art="mega",
          head="Youth strike sweeps 25+ countries",
          deck="Students march across Europe over living costs. (Straits Times)"),
@@ -193,40 +193,40 @@ CARDS = [
 ]
 
 BRIEFS = [
-    (14, "GAZA", "Israeli troops cross the Yellow Line, the first incursion since the truce. (BBC)"),
+    (14, "HODEIDAH", "Saudi coalition strikes Hodeidah port; Houthis warn airlines off Saudi airspace. (Reuters)"),
     (15, "JURF AL-SAKHAR", "Iraq moves against an Iran-backed militia stronghold. (Just Security)"),
-    (16, "SOUTH KORDOFAN", "Drone strike kills 10 at a gold mine in Sudan. (AllAfrica)"),
-    (17, "BADME", "Drone and artillery strikes reported on the Ethiopia\u2013Eritrea border. (AllAfrica)"),
-    (18, "MOGADISHU", "Somalia expels the UAE ambassador over sovereignty. (Africanews)"),
-    (19, "PORT-AU-PRINCE", "Forces kill 34 gang members in a Martissant raid. (Al Jazeera)"),
-    (20, "WASHINGTON", "Senate passes an energy permitting overhaul, 62\u201333. (Straits Times)"),
-    (21, "BRAS\u00cdLIA", "Central bank sells $1bn to slow the dollar's rise. (MercoPress)"),
-    (22, "WASHINGTON", "White House fires its cyber director after a week of outages. (France 24)"),
-    (23, "BERLIN", "Allies say Europe is ready to talk to Russia. (BBC)"),
+    (16, "BAYELSA", "Funeral boat capsizes in Bayelsa; 4 dead, 24 rescued, hundreds feared aboard. (Reuters)"),
+    (17, "LUSAKA", "High Court clears the way for jailed opposition leaders to seek bail. (Zambian Observer)"),
+    (18, "PRETORIA", "Police report 581 women killed in three months; 16 Days campaign launched. (BBC)"),
+    (19, "LOS ANGELES", "Jury convicts man of starting the deadly Palisades Fire at retrial. (AP)"),
+    (20, "NEW YORK", "Indian man gets 19\u00bd years for plot to kill Sikh separatist Pannun. (Reuters)"),
+    (21, "ST. LOUIS", "Judge approves Bayer's $7.25bn Roundup settlement. (Reuters)"),
+    (22, "WASHINGTON", "Trump confirms he fired his cyber chief: 'didn't think that person was good enough.' (Reuters)"),
+    (23, "MANCHESTER", "Drone pilot apologises for filming Pochettino's first Man Utd training. (Guardian)"),
     (24, "TALLINN", "Estonia to shut its road borders with Russia for six months. (Just Security)"),
-    (25, "MADRID", "S\u00e1nchez admits mistakes in a TV debate before the election. (France 24)"),
-    (26, "SHENZHEN", "APEC publishes its Outlook on trade, supply chains and AI. (MLex)"),
-    (27, "MANILA", "Philippines and Chile sign a free trade agreement. (AFP)"),
-    (28, "PESHAWAR", "Pakistan says it killed 22 militants in northwest raids. (The Hindu)"),
-    (29, "DHAKA", "Unrest and arson ahead of Hasina's planned return. (The Guardian)"),
-    (30, "ULAANBAATAR", "Mongolia's president resigns; speaker steps in. (AP)"),
-    (31, "HORMUZ", "Tanker attacks intensify; US war on Iran has cost $48.3bn. (Japan Times)"),
-    (32, "HARARE", "Zimbabwe destroys its 250,000th landmine. (Africanews)"),
-    (33, "BOGOT\u00c1", "Thousands march against Colombia's tax plans. (Al Jazeera)"),
-    (34, "GLOBAL", "IMF warns public debt will soon near 100% of world GDP. (MercoPress)"),
+    (25, "GENEVA", "UNICEF: 1,144 children killed or injured in Ukraine in 2026. (Reuters)"),
+    (26, "TOKYO", "Japan to buy 8m barrels of Saudi crude; Riyadh gains 16m barrels of storage. (Bloomberg)"),
+    (27, "SHENZHEN", "Xi and Prabowo launch China\u2013Indonesia economic partnership talks. (Xinhua)"),
+    (28, "SEOUL", "Seoul asks Uruguay to help restart Korea\u2013Mercosur trade talks. (Yonhap)"),
+    (29, "DHAKA", "Police say 124 Awami League members arrested in raids over 24 hours. (Views Bangladesh)"),
+    (30, "KATHMANDU", "Nepal PM Balendra Shah to visit India Nov 22\u201323, his first trip abroad. (IANS)"),
+    (31, "HORMUZ", "Tanker hit by projectile near Khasab catches fire; no casualties. (Reuters)"),
+    (32, "NAIROBI", "High Court lifts ban on publishing judges' individual performance scores. (The Standard)"),
+    (33, "BOGOT\u00c1", "Finance minister: 2026 deficit will top 7.6% of GDP, above budget. (Reuters)"),
+    (34, "GLOBAL", "UN's ninth straw poll fails; Grynspan leads with 10 votes, blocked by vetoes. (Guardian)"),
     (35, "DOHA", "India A thrash Nepal by 306 runs in the Rising Stars Cup. (IANS)"),
 ]
 
 DATE_CHECK_1 = ("LEFT OUT \u2014 Thu 19 Nov: ICJ Myanmar ruling \u00b7 Shenzhen declaration \u00b7 "
-                "Anthropic IPO $83 \u00b7 GTA VI launch \u00b7 Senate Iran vote 51\u201348 \u00b7 "
+                "Anthropic $81.3bn IPO \u00b7 GTA VI launch \u00b7 Senate Iran vote 51\u201348 \u00b7 "
                 "Homo erectus papers (18 Nov).")
 DATE_CHECK_2 = ("NOT YET SHOWN \u2014 any COP31 final text \u00b7 BepiColombo's Mercury orbit entry, "
                 "due Saturday 21 Nov [FORECAST].")
 
-FOOTER = ("Sources: Reuters \u00b7 AP \u00b7 AFP \u00b7 BBC \u00b7 Al Jazeera \u00b7 France 24 \u00b7 IMD \u00b7 "
-          "Morningstar/Dow Jones \u00b7 IANS \u00b7 Japan Times \u00b7 MLex \u00b7 MercoPress \u00b7 "
-          "AllAfrica \u00b7 Africanews \u00b7 The Guardian \u00b7 The Hindu \u00b7 Straits Times \u00b7 "
-          "Just Security. All 35 stories happened or were first reported Friday 20 November 2026.")
+FOOTER = ("Sources: Reuters \u00b7 AP \u00b7 BBC \u00b7 IMD \u00b7 Morningstar/Dow Jones \u00b7 IANS \u00b7 "
+          "Japan Times \u00b7 The Guardian \u00b7 Straits Times \u00b7 Just Security \u00b7 Mail & Guardian \u00b7 "
+          "Zambian Observer \u00b7 Bloomberg \u00b7 Xinhua \u00b7 Yonhap \u00b7 Views Bangladesh \u00b7 The Standard. "
+          "All 35 stories happened or were first reported Friday 20 November 2026.")
 
 # ------------------------------------------------------------------ map data
 # Rough continent outlines as (lon, lat) polygons; equirectangular.
@@ -264,14 +264,14 @@ CONTINENTS = [
 
 # Story number -> (lon, lat) of the place it happened.
 PINS = {1: (30.5, 50.4), 2: (84.9, 19.3), 3: (121.5, 25.0), 4: (4.4, 50.85),
-        5: (30.7, 36.9), 6: (23.0, 50.3), 7: (139.7, 35.7), 8: (127.0, 37.5),
-        9: (-53.0, -7.0), 10: (12.5, 41.9), 11: (-17.4, 14.7),
+        5: (30.7, 36.9), 6: (23.0, 50.3), 7: (139.7, 35.7), 8: (101.7, 3.1),
+        9: (-58.4, -34.6), 10: (12.5, 41.9), 11: (28.19, -25.75),
         12: (2.35, 48.85), 13: (174.8, -41.3)}
 # Badge nudges (dx, dy) in px where true pin positions would collide.
 # Europe cluster: pins 1/4/6 sit within ~10 px of each other at this scale,
 # so their badges are spread apart (true spot kept as a red dot + leader).
 NUDGE = {1: (16, -16), 4: (20, -18), 6: (-18, -16), 12: (-17, 11),
-         8: (-13, -12), 7: (13, 12)}
+         7: (13, 12)}
 
 
 def project(lon, lat, mx, my, s):
@@ -335,8 +335,8 @@ def draw_lead_art(d, idx, x0, y0, x1, y1):
         d.line(pts, fill=(255, 90, 70), width=3, joint="curve")
         d.polygon([(pts[-1][0], pts[-1][1]), (pts[-1][0] - 12, pts[-1][1] - 2),
                    (pts[-1][0] - 2, pts[-1][1] + 12)], fill=(255, 90, 70))
-        rows = [("TAIPEI", "\u22126.6%"), ("SEOUL", "\u22125.2%"),
-                ("TOKYO", "\u22124.8%"), ("HONG KONG", "\u22121.9%")]
+        rows = [("TAIPEI", "\u22126.2%"), ("SEOUL", "\u22125.2%"),
+                ("TOKYO", "\u22125.1%"), ("HONG KONG", "\u22121.9%")]
         ty = y0 + h - 52
         d.rectangle([x0 + 10, ty - 4, x1 - 10, y0 + h - 6], fill=(70, 16, 16))
         for j, (city, val) in enumerate(rows):
@@ -392,7 +392,7 @@ def draw_card_art(d, kind, x0, y0, x1, y1):
             d.rectangle([px, y0 + 16, px + 8, y0 + h - 10], fill=white)
         d.rectangle([x0 + 48, y0 + h - 10, x0 + 196, y0 + h - 6], fill=white)
     elif kind == "forest":
-        # Three rainforest trees for the Raoni ancestral-land card.
+        # Three rainforest trees (unused after the Raoni card was replaced).
         for tx, top, base in [(76, 8, 34), (116, 2, 42), (156, 10, 30)]:
             d.polygon([(tx, y0 + top), (tx + 14, y0 + base), (tx - 14, y0 + base)],
                       fill=white)
@@ -421,6 +421,23 @@ def draw_card_art(d, kind, x0, y0, x1, y1):
         d.line([(x0 + 150, cy - 18), (x0 + 168, cy - 26)], fill=white, width=3)
         d.line([(x0 + 150, cy), (x0 + 172, cy)], fill=white, width=3)
         d.line([(x0 + 150, cy + 18), (x0 + 168, cy + 26)], fill=white, width=3)
+    elif kind == "ball":
+        # Soccer ball: white ring, pentagon, seams.
+        d.ellipse([cx - 16, cy - 16, cx + 16, cy + 16], outline=white, width=3)
+        d.polygon([(cx, cy - 7), (cx + 7, cy - 2), (cx + 4, cy + 7),
+                   (cx - 4, cy + 7), (cx - 7, cy - 2)], fill=white)
+        d.line([(cx, cy - 16), (cx, cy - 7)], fill=white, width=2)
+        d.line([(cx + 15, cy - 5), (cx + 7, cy - 2)], fill=white, width=2)
+        d.line([(cx - 15, cy - 5), (cx - 7, cy - 2)], fill=white, width=2)
+        d.line([(cx + 10, cy + 13), (cx + 4, cy + 7)], fill=white, width=2)
+        d.line([(cx - 10, cy + 13), (cx - 4, cy + 7)], fill=white, width=2)
+    elif kind == "car":
+        # Side-on car: cabin + body + two dark wheels.
+        d.polygon([(x0 + 56, cy + 4), (x0 + 78, cy - 12), (x0 + 128, cy - 12),
+                   (x0 + 148, cy + 4)], fill=white)
+        d.rectangle([x0 + 44, cy + 2, x0 + 160, cy + 12], fill=white)
+        d.ellipse([x0 + 62, cy + 8, x0 + 80, cy + 24], fill=(30, 30, 30))
+        d.ellipse([x0 + 124, cy + 8, x0 + 142, cy + 24], fill=(30, 30, 30))
     else:  # cricket
         d.line([(x0 + 60, y0 + 10), (x0 + 96, y0 + h - 12)], fill=(210, 170, 110), width=10)
         d.ellipse([x0 + 150, cy - 10, x0 + 170, cy + 10], fill=(200, 30, 30))
@@ -502,9 +519,11 @@ def build():
         chip = lead["chip"]
         cf = F_BOLD(8)
         tw = d.textlength(chip, font=cf)
-        d.rectangle([x + lw - tw - 12, ly + art_h - 16, x + lw - 2, ly + art_h - 2],
+        # lead 3's table fills the art bottom, so its chip goes top-right
+        cy0 = ly + 4 if lead["num"] == 3 else ly + art_h - 16
+        d.rectangle([x + lw - tw - 12, cy0, x + lw - 2, cy0 + 14],
                     fill=(255, 255, 255))
-        d.text((x + lw - tw - 8, ly + art_h - 14), chip, font=cf, fill=INK)
+        d.text((x + lw - tw - 8, cy0 + 2), chip, font=cf, fill=INK)
         ty = ly + art_h + 6
         d.text((x, ty), f"{lead['num']}  ", font=F_BOLD(11), fill=RED)
         kx = x + d.textlength(f"{lead['num']}  ", font=F_BOLD(11))
@@ -563,7 +582,7 @@ def build():
         t = str(num)
         d.text((bx - d.textlength(t, font=nf) / 2, by - 6), t, font=nf,
                fill=(255, 255, 255))
-    d.text((mx + 2, my + mh - 13),
+    d.text((mx + 2, my + mh - 26),
            "Each number is the story with that number on this page.",
            font=F_SANS(8), fill=(220, 228, 240))
     # briefs: two columns of 11
