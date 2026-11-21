@@ -132,7 +132,7 @@ STATS = [
     ("300,000+", "evacuated before Akvan"),
     ("\u22126.6%", "Taiex \u2014 worst week since 1990"),
     ("100,000", "UK\u2013EU youth visas a year"),
-    ("2.3%", "Japan core inflation"),
+    ("2.2%", "Japan core inflation"),
     ("$3.79bn", "GTA VI first-day sales"),
 ]
 
@@ -144,8 +144,8 @@ REGIONS = [("Europe", 9, (178, 30, 30)), ("Asia", 10, (24, 44, 74)),
 LEADS = [
     dict(num=1, kicker="KYIV, UKRAINE \u2014 MISSILE STRIKES",
          head="Russian missiles hit three Kyiv bridges",
-         deck=("400+ drones and 110+ missiles in an overnight barrage kill 9 "
-               "and cut power, heating and water. (Reuters, AP)"),
+         deck=("400+ drones and 110+ missiles in an overnight barrage kill 8 "
+               "across Ukraine and cut power, heating and water. (Reuters, AP)"),
          chip="OFFICIALS' COUNT"),
     dict(num=2, kicker="GOPALPUR, INDIA \u2014 CYCLONE AKVAN",
          head="Akvan comes ashore in eastern India",
@@ -170,14 +170,14 @@ CARDS = [
          head="Russian missiles cross into Poland",
          deck="NATO calls it a grave violation; jets scrambled. (Reuters, AP)"),
     dict(num=7, kicker="TOKYO \u2014 INFLATION", bg=RED_DK, art="cpi",
-         head="Japan core inflation hits 2.3%",
+         head="Japan core inflation hits 2.2%",
          deck="Highest this year keeps a BOJ rate rise on track. (Japan Times)"),
     dict(num=8, kicker="SEOUL \u2014 RETRIAL", bg=PURPLE, art="court",
          head="Court orders ex-PM Han retrial",
          deck="Martial-law case sent back; one conviction overturned. (Japan Times)"),
-    dict(num=9, kicker="SAN SALVADOR \u2014 ELECTION", bg=GREEN, art="ballot",
-         head="Bukele registers for third term",
-         deck="Filed after a 2025 change ends re-election limits. (Al Jazeera)"),
+    dict(num=9, kicker="BRASILIA \u2014 INDIGENOUS LAND", bg=GREEN, art="forest",
+         head="Lula recognises Raoni's ancestral land",
+         deck="Lula gives Raoni's ancestral land permanent protection. (Al Jazeera)"),
     dict(num=10, kicker="ROME \u2014 GENERAL STRIKE", bg=OCHRE, art="crowd",
          head="Italy stops as CGIL calls strike",
          deck="Tens of thousands march in 100+ cities over wages. (Reuters)"),
@@ -265,10 +265,13 @@ CONTINENTS = [
 # Story number -> (lon, lat) of the place it happened.
 PINS = {1: (30.5, 50.4), 2: (84.9, 19.3), 3: (121.5, 25.0), 4: (4.4, 50.85),
         5: (30.7, 36.9), 6: (23.0, 50.3), 7: (139.7, 35.7), 8: (127.0, 37.5),
-        9: (-89.2, 13.7), 10: (12.5, 41.9), 11: (-17.4, 14.7),
+        9: (-53.0, -7.0), 10: (12.5, 41.9), 11: (-17.4, 14.7),
         12: (2.35, 48.85), 13: (174.8, -41.3)}
 # Badge nudges (dx, dy) in px where true pin positions would collide.
-NUDGE = {4: (17, -13), 12: (-17, 11), 8: (-13, -12), 7: (13, 12)}
+# Europe cluster: pins 1/4/6 sit within ~10 px of each other at this scale,
+# so their badges are spread apart (true spot kept as a red dot + leader).
+NUDGE = {1: (16, -16), 4: (20, -18), 6: (-18, -16), 12: (-17, 11),
+         8: (-13, -12), 7: (13, 12)}
 
 
 def project(lon, lat, mx, my, s):
@@ -382,12 +385,18 @@ def draw_card_art(d, kind, x0, y0, x1, y1):
                 (cx - 22, cy - 14)], fill=(255, 120, 90), width=3)
         d.polygon([(cx - 22, cy - 14), (cx - 30, cy - 14), (cx - 22, cy - 6)],
                   fill=(255, 120, 90))
-        d.text((cx - 8, cy - 11), "2.3%", font=F_BOLD(17), fill=white)
+        d.text((cx - 8, cy - 11), "2.2%", font=F_BOLD(17), fill=white)
     elif kind == "court":
         d.rectangle([x0 + 52, y0 + 10, x0 + 192, y0 + 16], fill=white)
         for px in [62, 92, 122, 152, 178]:
             d.rectangle([px, y0 + 16, px + 8, y0 + h - 10], fill=white)
         d.rectangle([x0 + 48, y0 + h - 10, x0 + 196, y0 + h - 6], fill=white)
+    elif kind == "forest":
+        # Three rainforest trees for the Raoni ancestral-land card.
+        for tx, top, base in [(76, 8, 34), (116, 2, 42), (156, 10, 30)]:
+            d.polygon([(tx, y0 + top), (tx + 14, y0 + base), (tx - 14, y0 + base)],
+                      fill=white)
+            d.rectangle([tx - 3, y0 + base, tx + 3, y0 + h - 6], fill=white)
     elif kind == "ballot":
         d.rectangle([x0 + 66, y0 + 16, x0 + 178, y0 + h - 8], fill=white)
         d.rectangle([x0 + 88, y0 + 8, x0 + 156, y0 + 16], fill=(200, 30, 30))
