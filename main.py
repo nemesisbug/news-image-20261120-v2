@@ -1,33 +1,21 @@
-#!/usr/bin/env python3
-"""Friday 20 November 2026 — renewal entry for news-image-20261120.
+"""Renewal entrypoint: hand the rendered front page to the grader.
 
-Deterministic, offline entrypoint: copies the entry image that this
-repository holds into the output directory make.fun reads.
-"""
-import os
-import shutil
+The repository carries entry.png, a 1024x1024 PNG drawn by build_image.py.
+This module copies it into the directory named by MAKEFUN_OUTPUT_DIR (or
+/output when the variable is absent) and confirms the copy is identical.
+It touches no network and keeps no state between runs."""
+from os import environ, makedirs
+from pathlib import Path
+from shutil import copyfile
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "entry.png")
-OUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
-DST = os.path.join(OUT_DIR, "entry.png")
+_IMAGE = Path(__file__).resolve().parent / "entry.png"
+_OUTPUT = Path(environ.get("MAKEFUN_OUTPUT_DIR", "/output")) / "entry.png"
 
-
-def main():
-    with open(SRC, "rb") as fh:
-        head = fh.read(4)
-    if head != b"\x89PNG":
-        raise SystemExit("entry.png is not a PNG file")
-    os.makedirs(OUT_DIR, exist_ok=True)
-    shutil.copyfile(SRC, DST)
-    with open(DST, "rb") as fh:
-        copied = fh.read()
-    with open(SRC, "rb") as fh:
-        original = fh.read()
-    if copied != original:
-        raise SystemExit("entry.png copy differs from source")
-    print(f"wrote {DST} ({len(copied)} bytes)")
-
-
-if __name__ == "__main__":
-    main()
+_PAYLOAD = _IMAGE.read_bytes()
+if _PAYLOAD[:4] != b"\x89PNG":
+    raise SystemExit("entry.png failed the PNG signature check")
+makedirs(_OUTPUT.parent, exist_ok=True)
+copyfile(_IMAGE, _OUTPUT)
+if _OUTPUT.read_bytes() != _PAYLOAD:
+    raise SystemExit("copied bytes differ from the repository image")
+print(f"wrote {_OUTPUT} ({len(_PAYLOAD)} bytes)")
